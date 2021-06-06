@@ -58,9 +58,9 @@ http://genome.ucsc.edu/s/avogar/hse21_H3K9me3_G4_human
 
 Построим гистограммы распределения длин участков вторичной стр-ры ДНК. Количество пиков 11539:
 
-<img src="/images/len_hist.GSE99205_common_HaCaT_G4_ChIP_peaks_RNase_treated-1.png" alt="GSE99205_common_HaCaT_G4_ChIP_peaks_RNase_treated" width="600"/>
+<img src="/images/len_hist.G4-1.png" alt="G4" width="600"/>
 
 Посмотрим, где располагаются участки стр-ры ДНК относительно аннотированных генов. Для этого построим графики типа пай-чарт с помощью R-библиотека ChIPseeker:
 
-<img src="/images/chip_seeker.GSE99205_common_HaCaT_G4_ChIP_peaks_RNase_treated.plotAnnoPie.png" alt="GSE99205_common_HaCaT_G4_ChIP_peaks_RNase_treated" width="500"/>
+<img src="/images/chip_seeker.G4.plotAnnoPie.png" alt="G4" width="500"/>
 
