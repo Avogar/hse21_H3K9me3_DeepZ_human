@@ -18,9 +18,7 @@ library(clusterProfiler)
 ###
 
 names <-c('H3K9me3_MCF7.ENCFF501UHK.hg19.filtered',
-          'H3K9me3_MCF7.ENCFF501UHK.hg38.filtered',
-          'H3K9me3_MCF7.ENCFF518MOR.hg19.filtered',
-          'H3K9me3_MCF7.ENCFF518MOR.hg38.filtered')
+          'H3K9me3_MCF7.ENCFF518MOR.hg19.filtered')
 
 ###
 
