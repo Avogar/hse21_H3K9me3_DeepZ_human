@@ -18,7 +18,8 @@ library(clusterProfiler)
 
 names <-c('H3K9me3_MCF7.ENCFF501UHK.hg19.filtered',
           'H3K9me3_MCF7.ENCFF518MOR.hg19.filtered',
-          'G4')
+          'G4',
+          'H3K9me3_MCF7.intersect_with_G4')
 
 for (name in names)
 {  
