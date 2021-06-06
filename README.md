@@ -50,9 +50,7 @@ Chip-seq эксперименты: https://www.encodeproject.org/files/ENCFF501U
 
 <img src="/images/chip_seeker.H3K9me3_MCF7.ENCFF518MOR.hg19.filtered.plotAnnoPie.png" alt="H3K9me3_MCF7.ENCFF518MOR.hg19" width="500"/>
 
-Визуализируем исходные два набора ChIP-seq пиков, а также их объединение в геномном браузере:
-
-http://genome.ucsc.edu/s/avogar/hse21_H3K9me3_G4_human
+Визуализируем исходные два набора ChIP-seq пиков, а также их объединение в геномном браузере. Ссылка на сессию в геномном браузере будет далее в отчете.
 
 ## 2. Анализ участков вторичной стр-ры ДНК
 
@@ -74,3 +72,16 @@ http://genome.ucsc.edu/s/avogar/hse21_H3K9me3_G4_human
 
 <img src="/images/chip_seeker.H3K9me3_MCF7.intersect_with_DeepZ.plotAnnoPie.png" alt="H3K9me3_MCF7.intersect_with_DeepZ" width="500"/>
 
+Визуализируем в геномном браузере исходные участки стр-ры ДНК, а также их пересечения с гистоновой меткой. Ссылка на сессию в геномном бруазере:
+
+http://genome.ucsc.edu/s/avogar/hse21_H3K9me3_G4_human
+
+Приведём 2 места пересечаения гистоновой метки со структурой ДНК.
+
+- Ген ZNF300, координаты chr5:150,284,250-150,284,900:
+
+<img src="/images/intersection1.png" alt="intersection1" width="3000"/>
+
+- Ген LOC100499194, координаты chr2:114,737,200-114,737,700:
+
+<img src="/images/intersection2.png" alt="intersection2" width="3000"/>
