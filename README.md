@@ -56,21 +56,21 @@ http://genome.ucsc.edu/s/avogar/hse21_H3K9me3_G4_human
 
 ## 2. Анализ участков вторичной стр-ры ДНК
 
-Построим гистограмму распределения длин участков вторичной стр-ры ДНК. Количество пиков 11539:
+Построим гистограмму распределения длин участков вторичной стр-ры ДНК. Количество пиков 19394:
 
-<img src="/images/len_hist.G4.png" alt="G4" width="600"/>
+<img src="/images/len_hist.DeepZ.png" alt="DeepZ" width="600"/>
 
 Посмотрим, где располагаются участки стр-ры ДНК относительно аннотированных генов:
 
-<img src="/images/chip_seeker.G4.plotAnnoPie.png" alt="G4" width="500"/>
+<img src="/images/chip_seeker.DeepZ.plotAnnoPie.png" alt="DeepZ" width="500"/>
 
 ## 3. Анализ пересечений гистоновой метки и стр-ры ДНК
 
-Построим гистограмму распределения длин пересечений гистоновой метки и структуры ДНК. Количество пиков 16:
+Построим гистограмму распределения длин пересечений гистоновой метки и структуры ДНК. Количество пиков 528:
 
-<img src="/images/len_hist.H3K9me3_MCF7.intersect_with_G4.png" alt="H3K9me3_MCF7.intersect_with_G4" width="600"/>
+<img src="/images/len_hist.H3K9me3_MCF7.intersect_with_DeepZ.png" alt="H3K9me3_MCF7.intersect_with_DeepZ" width="600"/>
 
 Посмотрим, где располагаются участки пересечений относительно аннотированных генов.
 
-<img src="/images/chip_seeker.H3K9me3_MCF7.intersect_with_G4.plotAnnoPie.png" alt="H3K9me3_MCF7.intersect_with_G4" width="500"/>
+<img src="/images/chip_seeker.H3K9me3_MCF7.intersect_with_DeepZ.plotAnnoPie.png" alt="H3K9me3_MCF7.intersect_with_DeepZ" width="500"/>
 
