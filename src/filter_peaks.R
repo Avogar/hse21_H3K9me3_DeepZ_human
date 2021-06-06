@@ -17,7 +17,7 @@ for (name in names)
       geom_histogram() +
       ggtitle(name, subtitle = sprintf('Number of peaks = %s', nrow(bed_df))) +
       theme_bw()
-    ggsave(paste0('filter_peaks.', name, '.init.hist.pdf'), path = OUT_DIR)
+    ggsave(paste0('filter_peaks.', name, '.init.hist.png'), path = OUT_DIR, device = 'png')
     
     # Remove long peaks
     bed_df <- bed_df %>%
@@ -29,7 +29,7 @@ for (name in names)
       geom_histogram() +
       ggtitle(name, subtitle = sprintf('Number of peaks = %s', nrow(bed_df))) +
       theme_bw()
-    ggsave(paste0('filter_peaks.', name, '.filtered.hist.pdf'), path = OUT_DIR)
+    ggsave(paste0('filter_peaks.', name, '.filtered.hist.png'), path = OUT_DIR, device = 'png')
     
     bed_df %>%
       select(-len) %>%
