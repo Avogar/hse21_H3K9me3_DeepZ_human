@@ -4,10 +4,11 @@ source('lib.R')
 
 if (!requireNamespace("BiocManager", quietly = TRUE))
   install.packages("BiocManager")
-BiocManager::install("TxDb.Hsapiens.UCSC.hg19.knownGene")
-BiocManager::install("ChIPseeker")
-BiocManager::install("org.Hs.eg.db")
-BiocManager::install("clusterProfiler")
+
+#BiocManager::install("TxDb.Hsapiens.UCSC.hg19.knownGene")
+#BiocManager::install("ChIPseeker")
+#BiocManager::install("org.Hs.eg.db")
+#BiocManager::install("clusterProfiler")
 
 
 library(ChIPseeker)
@@ -15,12 +16,9 @@ library(TxDb.Hsapiens.UCSC.hg19.knownGene)
 library(org.Hs.eg.db)
 library(clusterProfiler)
 
-###
-
 names <-c('H3K9me3_MCF7.ENCFF501UHK.hg19.filtered',
-          'H3K9me3_MCF7.ENCFF518MOR.hg19.filtered')
-
-###
+          'H3K9me3_MCF7.ENCFF518MOR.hg19.filtered',
+          'G4')
 
 for (name in names)
 {  

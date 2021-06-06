@@ -5,7 +5,8 @@ source('lib.R')
 names <-c('H3K9me3_MCF7.ENCFF501UHK.hg19',
           'H3K9me3_MCF7.ENCFF501UHK.hg38',
           'H3K9me3_MCF7.ENCFF518MOR.hg19',
-          'H3K9me3_MCF7.ENCFF518MOR.hg38')
+          'H3K9me3_MCF7.ENCFF518MOR.hg38',
+          'G4')
 
 for (name in names)
 {
