@@ -44,8 +44,23 @@ Chip-seq эксперименты: https://www.encodeproject.org/files/ENCFF501U
 
 - Эксперимент ENCFF501UHK:
 
-<img src="/images/chip_seeker.H3K9me3_MCF7.ENCFF501UHK.hg19.filtered.plotAnnoPie.png" alt="H3K9me3_MCF7.ENCFF518MOR.hg19" width="400"/>
+<img src="/images/chip_seeker.H3K9me3_MCF7.ENCFF501UHK.hg19.filtered.plotAnnoPie.png" alt="H3K9me3_MCF7.ENCFF501UHK.hg19" width="500"/>
 
 - Эксперимент ENCFF518MOR:
 
-<img src="/images/chip_seeker.H3K9me3_MCF7.ENCFF518MOR.hg19.filtered.plotAnnoPie.png" alt="H3K9me3_MCF7.ENCFF518MOR.hg19" width="400"/>
+<img src="/images/chip_seeker.H3K9me3_MCF7.ENCFF518MOR.hg19.filtered.plotAnnoPie.png" alt="H3K9me3_MCF7.ENCFF518MOR.hg19" width="500"/>
+
+Визуализируем исходные два набора ChIP-seq пиков, а также их объединение в геномном браузере:
+
+http://genome.ucsc.edu/s/avogar/hse21_H3K9me3_G4_human
+
+## 2. Анализ участков вторичной стр-ры ДНК
+
+Построим гистограммы распределения длин участков вторичной стр-ры ДНК. Количество пиков 11539:
+
+<img src="/images/len_hist.GSE99205_common_HaCaT_G4_ChIP_peaks_RNase_treated-1.png" alt="GSE99205_common_HaCaT_G4_ChIP_peaks_RNase_treated" width="600"/>
+
+Посмотрим, где располагаются участки стр-ры ДНК относительно аннотированных генов. Для этого построим графики типа пай-чарт с помощью R-библиотека ChIPseeker:
+
+<img src="/images/chip_seeker.GSE99205_common_HaCaT_G4_ChIP_peaks_RNase_treated.plotAnnoPie.png" alt="GSE99205_common_HaCaT_G4_ChIP_peaks_RNase_treated" width="500"/>
+
