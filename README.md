@@ -78,10 +78,16 @@ http://genome.ucsc.edu/s/avogar/hse21_H3K9me3_G4_human
 
 Приведём 2 места пересечаения гистоновой метки со структурой ДНК.
 
-- Ген ZNF300, координаты chr5:150,284,250-150,284,900:
+- Ген ZNF300, координаты chr5:150,284,250-150,285,000:
 
-<img src="/images/intersection1.png" alt="intersection1" width="3000"/>
+<img src="/images/intersection1.png" alt="intersection1" width="2000"/>
 
 - Ген LOC100499194, координаты chr2:114,737,200-114,737,700:
 
-<img src="/images/intersection2.png" alt="intersection2" width="3000"/>
+<img src="/images/intersection2.png" alt="intersection2" width="2000"/>
+
+Произведём ассоциацию полученных пересечений с ближайшими генами при помощи R-библиотеки ChIPpeakAnno. Всего удалось проассоциировать 64 пика. Уникальных генов всего 46.
+
+Проведём GO-анализ для полученных уникальных генов при помощи сайта http://pantherdb.org/. Получаем следующий список категорий:
+
+<img src="/images/go_categories.png" alt="go_categories" width="1000"/>
