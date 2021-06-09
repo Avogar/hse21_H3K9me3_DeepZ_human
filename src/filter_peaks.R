@@ -1,4 +1,4 @@
-setwd("/home/avogar/Projects/bioinfa/project/hse21_H3K9me3_G4_human/src")
+setwd("/home/avogar/Projects/bioinfa/project/hse21_H3K9me3_ZDNA_human/src")
 
 source('lib.R')
 

@@ -1,4 +1,4 @@
-setwd("/home/avogar/Projects/bioinfa/project/hse21_H3K9me3_G4_human/src")
+setwd("/home/avogar/Projects/bioinfa/project/hse21_H3K9me3_ZDNA_human/src")
 
 source('lib.R')
 
@@ -18,8 +18,8 @@ library(clusterProfiler)
 
 names <-c('H3K9me3_MCF7.ENCFF501UHK.hg19.filtered',
           'H3K9me3_MCF7.ENCFF518MOR.hg19.filtered',
-          'G4',
-          'H3K9me3_MCF7.intersect_with_G4')
+          'DeepZ',
+          'H3K9me3_MCF7.intersect_with_DeepZ')
 
 for (name in names)
 {  
