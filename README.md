@@ -2,13 +2,34 @@
 
 Организм: human.
 
-Структура ДНК: G4_chip.
+Структура ДНК: ZDNA_DeepZ.
 
 Гистоновая метка: H3K9me3.
 
 Тип клеток: MCF-7.
 
 Chip-seq эксперименты: https://www.encodeproject.org/files/ENCFF501UHK/, https://www.encodeproject.org/files/ENCFF518MOR/
+
+## 0. Скачивание данных.
+
+Скачиваем данные экспериментов командами:
+```bash
+wget https://www.encodeproject.org/files/ENCFF501UHK/@@download/ENCFF501UHK.bed.gz
+wget https://www.encodeproject.org/files/ENCFF518MOR/@@download/ENCFF518MOR.bed.gz
+```
+
+Оставим только первые 5 столбцов:
+```bash
+zcat ENCFF501UHK.bed.gz | cut -f1-5 > H3K9me3_MCF7.ENCFF501UHK.hg38.bed
+zcat ENCFF518MOR.bed.gz | cut -f1-5 > H3K9me3_MCF7.ENCFF518MOR.hg38.bed
+```
+
+Приведем данные из версии hg38 к версии hg19 командами:
+```bash
+wget https://hgdownload.cse.ucsc.edu/goldenpath/hg38/liftOver/hg38ToHg19.over.chain.gz
+liftOver H3K9me3_MCF7.ENCFF518MOR.hg38.bed  hg38ToHg19.over.chain.gz   H3K9me3_MCF7.ENCFF518MOR.hg19.bed   H3K9me3_MCF7.ENCFF518MOR.unmapped.bed 
+liftOver H3K9me3_MCF7.ENCFF501UHK.hg38.bed  hg38ToHg19.over.chain.gz   H3K9me3_MCF7.ENCFF501UHK.hg19.bed   H3K9me3_MCF7.ENCFF501UHK.unmapped.bed
+```
 
 ## 1. Анализ пиков гистоновой метки
 
@@ -50,6 +71,11 @@ Chip-seq эксперименты: https://www.encodeproject.org/files/ENCFF501U
 
 <img src="/images/chip_seeker.H3K9me3_MCF7.ENCFF518MOR.hg19.filtered.plotAnnoPie.png" alt="H3K9me3_MCF7.ENCFF518MOR.hg19" width="500"/>
 
+Объединим данные двух экспериментов командой:
+```bash
+cat  *.filtered.bed | sort -k1,1 -k2,2n | bedtools merge > H3K9me3_MCF7.merge.hg19.bed
+```
+
 Визуализируем исходные два набора ChIP-seq пиков, а также их объединение в геномном браузере. Ссылка на сессию в геномном браузере будет далее в отчете.
 
 ## 2. Анализ участков вторичной стр-ры ДНК
@@ -63,6 +89,11 @@ Chip-seq эксперименты: https://www.encodeproject.org/files/ENCFF501U
 <img src="/images/chip_seeker.DeepZ.plotAnnoPie.png" alt="DeepZ" width="500"/>
 
 ## 3. Анализ пересечений гистоновой метки и стр-ры ДНК
+
+Найдём пересечение гистоновой метки и структуры ДНК при помощи команды:
+```bash
+bedtools intersect  -a DeepZ.bed   -b  H3K9me3_MCF7.merge.hg19.bed  >  H3K9me3_MCF7.intersect_with_DeepZ.bed
+```
 
 Построим гистограмму распределения длин пересечений гистоновой метки и структуры ДНК. Количество пиков 528:
 
