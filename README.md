@@ -33,7 +33,7 @@ liftOver H3K9me3_MCF7.ENCFF501UHK.hg38.bed  hg38ToHg19.over.chain.gz   H3K9me3_M
 
 ## 1. Анализ пиков гистоновой метки
 
-Построим гистограммы длин участков для каждого эксперимента до и после конвертации из верси hg38 в hg19.
+Построим гистограммы длин участков для каждого эксперимента до и после конвертации из верси hg38 в hg19, используя программу [len_hist.R](https://github.com/Avogar/hse21_H3K9me3_DeepZ_human/blob/master/src/len_hist.R)
 
 - Эксперимент ENCFF501UHK, версия hg38, количество пиков 40646: 
 
@@ -51,7 +51,7 @@ liftOver H3K9me3_MCF7.ENCFF501UHK.hg38.bed  hg38ToHg19.over.chain.gz   H3K9me3_M
 
 <img src="/images/len_hist.H3K9me3_MCF7.ENCFF518MOR.hg19.png" alt="H3K9me3_MCF7.ENCFF518MOR.hg19" width="600"/>
 
-Выкинем слишком длинные пики (>5000) и построим гистограммы после фильтрации для данных hg19.
+Выкинем слишком длинные пики (>5000), используя программу используя программу [filter_peaks.R](https://github.com/Avogar/hse21_H3K9me3_DeepZ_human/blob/master/src/filter_peaks.R), и построим гистограммы после фильтрации для данных hg19
 
 - Эксперимент ENCFF501UHK, количество пиков 40166: 
 
@@ -61,7 +61,7 @@ liftOver H3K9me3_MCF7.ENCFF501UHK.hg38.bed  hg38ToHg19.over.chain.gz   H3K9me3_M
 
 <img src="/images/filter_peaks.H3K9me3_MCF7.ENCFF518MOR.hg19.filtered.hist.png" alt="H3K9me3_MCF7.ENCFF518MOR.hg19" width="600"/>
 
-Посмотрим, где располагаются пики гистоновой метки относительно аннотированных генов. Для этого построим графики типа пай-чарт с помощью R-библиотека ChIPseeker.
+Посмотрим, где располагаются пики гистоновой метки относительно аннотированных генов. Для этого построим графики типа пай-чарт, используя программу [chip_seeker.R](https://github.com/Avogar/hse21_H3K9me3_DeepZ_human/blob/master/src/chip_seeker.R).
 
 - Эксперимент ENCFF501UHK:
 
@@ -117,7 +117,7 @@ http://genome.ucsc.edu/s/avogar/hse21_H3K9me3_G4_human
 
 <img src="/images/intersection2.png" alt="intersection2" width="2000"/>
 
-Произведём ассоциацию полученных пересечений с ближайшими генами при помощи R-библиотеки ChIPpeakAnno. Всего удалось проассоциировать 64 пика. Уникальных генов всего 46.
+Произведём ассоциацию полученных пересечений с ближайшими генами при помощи программы [ChIPpeakAnno.R](https://github.com/Avogar/hse21_H3K9me3_DeepZ_human/blob/master/src/ChIPpeakAnno.R). Всего удалось проассоциировать 64 пика. Уникальных генов всего 46.
 
 Проведём GO-анализ для полученных уникальных генов при помощи сайта http://pantherdb.org/. Приведем список наиболее статистически значимых категорий:
 
