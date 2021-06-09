@@ -105,7 +105,7 @@ bedtools intersect  -a DeepZ.bed   -b  H3K9me3_MCF7.merge.hg19.bed  >  H3K9me3_M
 
 Визуализируем в геномном браузере исходные участки стр-ры ДНК, а также их пересечения с гистоновой меткой. Ссылка на сессию в геномном бруазере:
 
-http://genome.ucsc.edu/s/avogar/hse21_H3K9me3_G4_human
+http://genome.ucsc.edu/s/avogar/hse21_H3K9me3_ZDNA_human
 
 Приведём 2 места пересечаения гистоновой метки со структурой ДНК.
 
