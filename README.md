@@ -117,8 +117,10 @@ http://genome.ucsc.edu/s/avogar/hse21_H3K9me3_ZDNA_human
 
 <img src="/images/intersection2.png" alt="intersection2" width="2000"/>
 
-Произведём ассоциацию полученных пересечений с ближайшими генами при помощи программы [ChIPpeakAnno.R](https://github.com/Avogar/hse21_H3K9me3_DeepZ_human/blob/master/src/ChIPpeakAnno.R). Всего удалось проассоциировать 64 пика. Уникальных генов всего 46.
+Произведём ассоциацию полученных пересечений с ближайшими генами при помощи программы [ChIPpeakAnno.R](https://github.com/Avogar/hse21_H3K9me3_DeepZ_human/blob/master/src/ChIPpeakAnno.R). Всего удалось проассоциировать 64 пика. Уникальных генов всего 46. Полный список уникальных генов можно посмотреть [здесь](https://github.com/Avogar/hse21_H3K9me3_ZDNA_human/blob/master/data/H3K9me3_MCF7.intersect_with_DeepZ.genes_uniq.txt).
 
 Проведём GO-анализ для полученных уникальных генов при помощи сайта http://pantherdb.org/. Приведем список наиболее статистически значимых категорий:
 
 <img src="/images/go_categories.png" alt="go_categories" width="1000"/>
+
+Полный результат GO-анализа можно посмотреть [здесь](https://github.com/Avogar/hse21_H3K9me3_ZDNA_human/blob/master/data/pantherdb_GO_analysis.txt).
